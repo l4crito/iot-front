@@ -1,5 +1,8 @@
 port=4200
 message="default message"
+run:
+	 ng serve --watch;
+
 pid:
 	sudo lsof -i :$(port);
 
