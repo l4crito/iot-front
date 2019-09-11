@@ -12,5 +12,4 @@ deploy:
 	sudo cp -r dist/iot-front/* docs/
 	sudo git add .
 	sudo git commit -m $(message)
-	sudo git push
 	
