@@ -7,7 +7,7 @@ pid:
 	sudo lsof -i :$(port);
 
 deploy:
-	sudo ng build --prod
+	sudo ng build --prod --base-href
 	sudo rm -rf docs/*
 	sudo cp -r dist/iot-front/* docs/
 	sudo git add .
