@@ -10,6 +10,4 @@ deploy:
 	sudo ng build --prod --base-href https://l4crito.github.io/iot-front/
 	sudo rm -rf docs/*
 	sudo cp -r dist/iot-front/* docs/
-	sudo git add .
-	sudo git commit -m $(message)
 	

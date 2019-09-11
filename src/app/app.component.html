@@ -1,5 +1,7 @@
+<br>
+<br>
 <div class="background">
-  <mat-card class="line">
+  <div class="line">
     <mat-form-field appearance="outline">
       <mat-label>Cantidad de saltos</mat-label>
       <input matInput [(ngModel)]="blinks">
@@ -10,12 +12,22 @@
       <input matInput [(ngModel)]="pause">
       <mat-icon matSuffix>timelapse</mat-icon>
     </mat-form-field>
-    <button mat-button color="accent" (click)="blink()">Blink</button>
-  </mat-card>
-  <!-- <div>
-    <button mat-button color="primary" (click)="fade()">Fade</button>
+    <button mat-raised-button color="accent" (click)="blink()">Blink</button>
   </div>
-  <div>
-    <button mat-stroked-button (click)="pwm()">Pwm</button>
-  </div> -->
+  <div class="line">
+    <mat-form-field appearance="outline">
+      <mat-label>Duración de ciclo</mat-label>
+      <input matInput [(ngModel)]="delay">
+      <mat-icon matSuffix>timelapse</mat-icon>
+    </mat-form-field>
+    <button mat-raised-button (click)="fade()">Fade</button>
+  </div>
+  <div class="line">
+    <mat-slider class="mat-slider-horizontal" color="warn" #slider (change)="pwm()" [thumbLabel]="true" [min]="0"
+      [step]="1" [max]="255" [(ngModel)]="value">
+    </mat-slider>
+  </div>
 </div>
+
+<mat-icon (click)="openBottomSheet()" class="settings" style="font-size: 40px">perm_data_setting
+</mat-icon>

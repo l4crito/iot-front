@@ -5,13 +5,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
-import { MatButtonModule, MatInputModule, MatFormFieldModule, MatIconModule, MatCardModule } from '@angular/material';
+import {
+  MatButtonModule, MatInputModule, MatFormFieldModule,
+  MatBottomSheetModule,
+  MatSliderModule,
+  MatIconModule, MatCardModule
+} from '@angular/material';
 import { FormsModule } from '@angular/forms';
+import { SettingsComponent } from './components/settings/settings.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -24,8 +31,11 @@ import { FormsModule } from '@angular/forms';
     MatFormFieldModule,
     MatInputModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    MatBottomSheetModule,
+    MatSliderModule
   ],
+  entryComponents: [SettingsComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
