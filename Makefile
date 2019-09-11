@@ -12,5 +12,4 @@ deploy:
 	cp -r dist/iot-front/* docs/
 	git add .
 	git commit -m $(message)
-	git push
 	
