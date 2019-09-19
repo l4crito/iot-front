@@ -1,5 +1,5 @@
 port=4200
-message="default message"
+message=default message
 run:
 	 ng serve --watch;
 
@@ -7,9 +7,9 @@ pid:
 	sudo lsof -i :$(port);
 
 deploy:
-	ng build --prod --base-href https://l4crito.github.io/iot-front/
-	rm -rf docs/*
-	cp -r dist/iot-front/* docs/
+	sudo ng build --prod --base-href https://l4crito.github.io/iot-front/
+	sudo rm -rf docs/*
+	sudo cp -r dist/iot-front/* docs/
 	git add .
-	git commit -m $(message)
+	git commit -m "$(message)"
 	git push origin master
