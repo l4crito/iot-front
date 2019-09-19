@@ -1,5 +1,5 @@
 port=4200
-message=default message
+m=default message
 run:
 	 ng serve --watch;
 
@@ -11,5 +11,5 @@ deploy:
 	sudo rm -rf docs/*
 	sudo cp -r dist/iot-front/* docs/
 	git add .
-	git commit -m "$(message)"
+	git commit -m "$(m)"
 	git push origin master
